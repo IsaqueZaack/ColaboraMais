@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.color-purple{
+  background-color: #6c29a6;
+}
+
+.text-purple{
+    color: #6c29a6;
+}
+
+.btn-purple{
+    background-color: #6c29a6;
+}
+
+.btn:hover{
+    background-color: #4c2889;
+}
+
+.login {
+  margin-top: 120px;
+}

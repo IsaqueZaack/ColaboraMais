@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colabora+</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Colabora Mais</title>
 
-<!--google fonts-->
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,29 +29,64 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="login-container">
-      <div class="login-header">
-        <h1>Colabora+</h1>
-      </div>
 
-      <form class="login-form">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="meuemail@email.com" />
-
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="minhasenha" />
-
-        <button type="submit">Entrar</button>
-
-        <a href="#" class="forgot-password">Esqueceu sua senha?</a>
-      </form>
-
-      <div class="logo">
-        <p>vivo</p>
+    <!--introdução-->
+    <div class="container-fluid p-1 min-60vh color-purple text-center">
+      <div class="col-12">
+        <h1 class="p-3 text-light">Colabora+</h1>
       </div>
     </div>
+
+    <!--form login-->
+    <div class="container login col-lg-3">
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold text-purple"
+            >E-mail</label
+          >
+          <input
+            type="email"
+            class="form-control bg-light p-2"
+            id="email"
+            placeholder="meuemail@email.com"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="senha" class="form-label fw-bold text-purple"
+            >Senha</label
+          >
+          <input
+            type="password"
+            class="form-control bg-light p-2"
+            id="senha"
+            placeholder="minhasenha"
+          />
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-purple text-light p-2">Entrar</button>
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="#" class="text-decoration-none text-purple"
+            >Esqueceu sua senha?</a
+          >
+        </div>
+      </form>
+    </div>
+
+<div
+          class=" container d-flex gap-4 col-lg-1 col-4 justify-content-center align-items-center my-1"
+        >
+          <img
+            src="./images/logovivo-removebg-preview.png"
+            class="img-fluid w-20 mt-5"
+            alt="logo next"
+          />
+
   </body>
 </html>
