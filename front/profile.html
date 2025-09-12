@@ -33,18 +33,18 @@
   </head>
 
   <body>
-    
     <!-- Cabeçalho -->
     <nav class="navbar navbar-dark navbar-expand-lg color-grey">
       <div class="container p-2">
-
         <a class="navbar-brand d-flex align-items-start text-light" href="#"
           ><img
             src="./images/colaboraVivo2-removebg-preview.png"
             alt="Logo"
             width="30"
             height="30"
-            class="">
+            class=""
+          />
+        </a>
 
         <button
           class="navbar-toggler collapsed"
@@ -57,26 +57,21 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto gap-2">
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#robo">Missões</a>
+              <a class="nav-link text-dark fw-bold" href="#">Missões</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#diferenciais"
-                >Fórum</a
-              >
+              <a class="nav-link text-dark fw-bold" href="#">Mentoria</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#desenvolvimento">Mentoria</a>
+              <a class="nav-link text-dark fw-bold" href="#">Fórum</a>
             </li>
-            
           </ul>
         </div>
       </div>
     </nav>
-
-    
 
     <main class="container text-center mt-4">
       <!-- Foto e nome -->
@@ -91,55 +86,70 @@
       <p class="mb-0 text-muted">Desenvolvedor Back-end</p>
       <p class="text-purple">Buddy: Gabriel Mendes</p>
 
-      <div class="container d-flex gap-5  justify-content-center">
+      <div class="container d-flex gap-5 justify-content-center">
         <!-- Progresso -->
-      <div class="card col-lg-6 shadow-sm border-0 p-3 mt-4">
-        <h6 class="fw-bold text-start">Progresso</h6>
-        <div class="d-flex justify-content-around align-items-center mt-2">
-          <!-- Gráfico de progresso -->
-          <div class="progress-circle ">
-            <span>75%</span>
+        <div class="card col-lg-6 shadow-sm border-0 p-3 mt-4">
+          <h6 class="fw-bold text-start">Progresso</h6>
+          <div class="d-flex justify-content-around align-items-center mt-2">
+            <!-- Gráfico de progresso -->
+            <div class="progress-circle">
+              <span>75%</span>
+            </div>
+            <!-- Pontuação -->
+            <div>
+              <p class="fw-bold">Pontuação</p>
+              <p class="text-purple">480/1000</p>
+            </div>
           </div>
-          <!-- Pontuação -->
-          <div>
-            <p class="fw-bold">Pontuação</p>
-            <p class="text-purple">480/1000</p>
+        </div>
+
+        <!-- Conquistas -->
+        <div class="card col-lg-6 shadow-sm border-0 p-3 mt-4">
+          <h6 class="fw-bold text-start">Conquistas</h6>
+          <div class="conquistas d-flex flex-row overflow-auto">
+            <div class="">
+              <img
+                src="./images/image-removebg-preview (2).png"
+                class="rounded m-1"
+                alt="Conquista 4"
+              />
+              <p>Conquista</p>
+            </div>
+            <div class="">
+              <img
+                src="./images/image-removebg-preview (2).png"
+                class="rounded m-1"
+                alt="Conquista 4"
+              />
+              <p>Conquista</p>
+            </div>
+            <div class="">
+              <img
+                src="./images/image-removebg-preview (2).png"
+                class="rounded m-1"
+                alt="Conquista 4"
+              />
+              <p>Conquista</p>
+            </div>
+            <div class="">
+              <img
+                src="./images/image-removebg-preview (2).png"
+                class="rounded m-1"
+                alt="Conquista 4"
+              />
+              <p>Conquista</p>
+            </div>
+            <div class="">
+              <img
+                src="./images/image-removebg-preview (2).png"
+                class="rounded m-1"
+                alt="Conquista 4"
+              />
+              <p>Conquista</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Conquistas -->
-      <div class="card col-lg-6 shadow-sm border-0 p-3 mt-4">
-        <h6 class="fw-bold text-start">Conquistas</h6>
-        <div class="conquistas d-flex flex-row overflow-auto">
-            <div class="">
-                <img src="./images/image-removebg-preview (2).png" class="rounded m-1" alt="Conquista 4"/>
-                <p> Conquista</p>
-            </div>
-            <div class="">
-                <img src="./images/image-removebg-preview (2).png" class="rounded m-1" alt="Conquista 4"/>
-                <p> Conquista</p>
-            </div>
-            <div class="">
-                <img src="./images/image-removebg-preview (2).png" class="rounded m-1" alt="Conquista 4"/>
-                <p> Conquista</p>
-            </div>
-            <div class="">
-                <img src="./images/image-removebg-preview (2).png" class="rounded m-1" alt="Conquista 4"/>
-                <p> Conquista</p>
-            </div>
-            <div class="">
-                <img src="./images/image-removebg-preview (2).png" class="rounded m-1" alt="Conquista 4"/>
-                <p> Conquista</p>
-            </div>
-          
-        </div>
-      </div>
-
-
-      </div>
-
-      
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

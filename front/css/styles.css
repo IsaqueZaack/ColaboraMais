@@ -33,6 +33,42 @@
   margin-top: 120px;
 }
 
+/* Navbar custom */
+  .navbar-nav .nav-link {
+    position: relative;
+    color: #591b62 !important; /* cor padrão */
+    font-weight: 500;
+    transition: all 0.3s ease; /* suaviza as animações */
+  }
+
+  /* Cor e crescimento no hover */
+  .navbar-nav .nav-link:hover {
+    color: #906bd6 !important; /* roxo do Bootstrap */
+    transform: scale(1.1); /* cresce um pouco */
+  }
+
+  /* underline animado */
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #6f42c1; /* cor da linha */
+    transition: width 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 100%; /* aparece no hover */
+  }
+
+  /* Item ativo (ex: página atual) */
+  .navbar-nav .nav-link.active {
+    color: #6f42c1;
+    font-weight: bold;
+  }
+
 /* Círculo de progresso simples (mock) */
 .progress-circle {
   width: 15vh;
