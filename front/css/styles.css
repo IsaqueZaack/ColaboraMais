@@ -4,9 +4,17 @@
   box-sizing: border-box;
 }
 
+.navbar img{
+    width: auto;
+    height: 5vh;
+}
 
 .color-purple{
   background-color: #6c29a6;
+}
+
+.color-grey{
+  background-color: #ededed;
 }
 
 .text-purple{
@@ -23,4 +31,32 @@
 
 .login {
   margin-top: 120px;
+}
+
+/* Círculo de progresso simples (mock) */
+.progress-circle {
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  background: conic-gradient(#ca9eea 75%, #ffffff 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #4B0082;
+  font-size: 18px;
+}
+
+/* Área de conquistas com rolagem lateral */
+.conquistas {
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+}
+
+.conquistas img {
+  flex: auto;
+  width: auto;
+  height: 15vh;
+  object-fit: cover;
 }
