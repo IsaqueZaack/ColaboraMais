@@ -15,8 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
     senhaInput.readOnly = true; // impede edição
   });
 
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // impede reload
-  window.location.href = "profile.html"; // redireciona
-})
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // impede reload
+    window.location.href = "profile.html"; // redireciona
+  });
+
+   document.addEventListener("DOMContentLoaded", function() {
+  // Preenche modal ao clicar na badge
+  const badges = document.querySelectorAll(".badge-img");
+
+  badges.forEach((badge) => {
+    badge.addEventListener("click", function() {
+      const src = badge.getAttribute("src");
+      const alt = badge.getAttribute("alt");
+      const descricao = badge.getAttribute("data-descricao");
+
+      document.getElementById("modalConquistaImg").src = src;
+      document.getElementById("modalConquistaImg").alt = alt;
+      document.getElementById("modalConquistaDesc").textContent = descricao;
+    });
+  });
+});
 })

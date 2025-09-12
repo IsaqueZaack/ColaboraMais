@@ -96,3 +96,13 @@
   height: 15vh;
   object-fit: cover;
 }
+
+.badge-img {
+  
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.badge-img:hover {
+  transform: scale(1.2);
+}
