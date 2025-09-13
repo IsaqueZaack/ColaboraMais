@@ -1,0 +1,34 @@
+.color-purple{
+    background-color: #6c29a6;
+}
+
+/* Estilização do menu lateral (offcanvas) */
+.offcanvas-header, .offcanvas-body{
+    background-color: #42295c;
+    color: #ffffff;
+}
+
+.nav-item{
+    color: #ffffff;
+}
+
+.offcanvas,
+.offcanvas .offcanvas-body,
+.offcanvas .nav-link,
+.offcanvas .nav-link i {
+    color: white !important;
+}
+
+.offcanvas .btn-close {
+  filter: invert(1); /* deixa o ícone branco */
+  opacity: 1;        /* mantém ele visível */
+}
+
+/*botão do menu */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
