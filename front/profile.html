@@ -33,52 +33,50 @@
   </head>
 
   <body>
-    <!-- Cabeçalho -->
-    <nav class="navbar navbar-dark navbar-expand-lg color-grey">
-      <div class="container p-2">
-        <a class="navbar-brand d-flex align-items-start text-light" href="#"
-          ><img
-            src="./images/colaboraVivo2-removebg-preview.png"
-            alt="Logo"
-            width="30"
-            height="30"
-            class=""
-          />
-        </a>
+    <!--navbar-->
+    <nav class="navbar bg-body-tertiary fixed-top color-purple">
+        <div class="container-fluid">
+            <!-- Lado esquerdo: menu + texto -->
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <!-- hamburguer branco -->
+                    <i class="fa-solid fa-bars text-white fs-4"></i>
+                </button>
+                <a class="navbar-brand ps-3 fs-3 text-white" href="#">Colabora+</a>
+            </div>
 
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto gap-2">
-            <li class="nav-item">
-              <a class="nav-link text-dark fw-bold" href="missoes.html">Missões</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark fw-bold" href="#">Mentoria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark fw-bold" href="#">Fórum</a>
-            </li>
-          </ul>
+            <!-- Lado direito: ícone de perfil -->
+            <div class="ms-auto">
+                <a href="index.html"><i class="bi bi-person-circle fs-1 text-white pe-4" ></i></a>
+            </div>
+
+            <!-- menu lateral -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fs-3 " id="offcanvasNavbarLabel">Colabora+</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5 ">
+                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fa-solid fa-house pe-3"></i>Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
+    <!--fim navbar-->
 
-    <main class="container text-center mt-4">
+    <main class="container text-center mt-5">
       <!-- Foto e nome -->
       <img
         src="./images/isaac.png"
         alt="Foto do Colaborador"
-        class="rounded-circle mb-3"
+        class="rounded-circle mb-3 mt-5"
         width="120"
         height="120"
       />
