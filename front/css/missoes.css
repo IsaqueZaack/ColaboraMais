@@ -2,6 +2,10 @@
     background-color: #6c29a6;
 }
 
+.rec-text{
+    color: #6d6969;
+}
+
 /* Estilização do menu lateral (offcanvas) */
 .offcanvas-header, .offcanvas-body{
     background-color: #42295c;
@@ -53,6 +57,11 @@
     object-fit: contain; /* Mantém a proporção da imagem */
     margin: 20px auto 0; /* Centraliza horizontalmente e adiciona margem superior */
 }
+.card {
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
 
 .btn, .btn-primary{
     background-color: #f06193;
@@ -66,4 +75,18 @@
 .btn-primary:hover{
     background-color: #e589a9;
 }
+
+/*link ver todos*/
+.link-mais{
+    color: #6c29a6;
+}
+
+.link-mais:hover{
+    color: #e589a9;
+    text-decoration: none;
+    border: 2px solid #e589a9;
+    border-radius: 4px;
+    padding: 4px 4px;
+}
+
 
