@@ -24,6 +24,19 @@
   opacity: 1;        /* mantém ele visível */
 }
 
+.navbar-nav .nav-link {
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease; /* suaviza as animações */
+}
+
+
+  /* Cor e crescimento no hover */
+.navbar-nav .nav-link:hover {
+    color: #ab90dd !important; /* roxo do Bootstrap */
+    transform: scale(1.0); /* cresce um pouco */
+}
+
 /*botão do menu */
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -32,3 +45,25 @@
     outline: none !important;
     box-shadow: none !important;
 }
+
+/* cards missões*/
+.card-img-top {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Mantém a proporção da imagem */
+    margin: 20px auto 0; /* Centraliza horizontalmente e adiciona margem superior */
+}
+
+.btn, .btn-primary{
+    background-color: #f06193;
+    border: none;
+    border-radius: 21px;
+    padding: 8px 20px;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover{
+    background-color: #e589a9;
+}
+

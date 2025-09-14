@@ -22,7 +22,7 @@
     <!--chamada para o bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-    
+
     <link rel="stylesheet" href="./css/missoes.css" />
 
 
@@ -44,7 +44,7 @@
 
             <!-- Lado direito: ícone de perfil -->
             <div class="ms-auto">
-                <a href="index.html"><i class="bi bi-person-circle fs-1 text-white pe-4" ></i></a>
+                <a href="index.html"><i class="bi bi-person-circle fs-1 text-white pe-4"></i></a>
             </div>
 
             <!-- menu lateral -->
@@ -56,10 +56,14 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5 ">
-                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fa-solid fa-house pe-3"></i>Início</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i
+                                    class="fa-solid fa-house pe-3"></i>Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i
+                                    class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#"><i
+                                    class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#"><i
+                                    class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,11 +71,67 @@
     </nav>
     <!--fim navbar-->
 
+    <!--seção missões-->
+    <section class="container-missoes text-center" style="margin-top: 100px;">
+        <h1 class="mb-4 pt-2 text-uppercase fw-bold">Minhas Missões</h1>
+        <div class="row w-75 mx-auto g-4">
+            <!--card 1-->
+            <div class="col-6">
+                <div class="card d-flex flex-row align-items-center p-2">
+                    <img src="./images/cultura.png" class="card-img-left ms-5" alt="Icone de cultura organizacional" style=width:100px; height:80px;>
+                    <div class="card-body">
+                        <h5 class="card-title">Introdução à cultura</h5>
+                        <button class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit">Concluído</button>
+                    </div>
+                </div>
+            </div>
+            <!--card 2-->
+            <div class="col-6">
+                <div class="card d-flex flex-row align-items-center p-2">
+                    <img src="./images/ferramentas.png" class="card-img-right ms-5" alt="Icone de ferramentas de trabalho" style=width:100px; height:80px;>
+                    <div class="card-body">
+                        <h5 class="card-title">Ferramentas de trabalho</h5>
+                        <button class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit">Em andamento</button>
+                    </div>
+                </div>
+            </div>
+            <!--card 3-->
+            <div class="col-6">
+                <div class="card d-flex flex-row align-items-center p-2">
+                    <img src="./images/processos.png" class="card-img-left ms-5" alt="Icone de processos internos" style=width:102px; height:80px;>
+                    <div class="card-body">
+                        <h5 class="card-title">Processos Internos</h5>
+                        <button class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit">Em andamento</button>
 
-    <div class="container text-center" style="margin-top: 100px;">
-        <h1 class="mb-4">Minhas Missões</h1>
-    </div>
-                
+                    </div>
+                </div>
+            </div>
+            <!--card 4-->
+            <div class="col-6">
+                <div class="card d-flex flex-row align-items-center p-2">
+                    <img src="./images/sustentabilidade.png" class="card-img-right ms-5" alt="Icone de sustentabilidade" style=width:105px; height:80px;>
+                    <div class="card-body">
+                        <h5 class="card-title">Sustentabilidade</h5>
+                        <button class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit">Iníciar</button>
+
+                    </div>
+                </div>
+            </div>
+            <!--card 5 >> alterar ainda-->
+            <div class="col-6">
+                <div class="card d-flex flex-row align-items-center p-2">
+                    <img src="./images/cultura.png" class="card-img-left ms-5" alt="Icone de sustentabilidade" style=width:100px; height:80px;>
+                    <div class="card-body">
+                        <h5 class="card-title">Sustentabilidade</h5>
+                        <button class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit">Iníciar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--fim seção missões-->
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
