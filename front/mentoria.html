@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minhas missões</title>
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--chamada para os icones-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!--chamada para o bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!--adicionar icone do bonequinho vivo-->
+
+    <link rel="stylesheet" href="./css/mentoria.css" />
+  </head>
+
+  <body>
+    <!--navbar-->
+    <nav class="navbar bg-body-tertiary fixed-top color-purple">
+      <div class="container-fluid">
+        <!-- Lado esquerdo: menu + texto -->
+        <div class="d-flex align-items-center">
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <!-- hamburguer branco -->
+            <i class="fa-solid fa-bars text-white fs-4"></i>
+          </button>
+          <a class="navbar-brand ps-3 fs-3 text-white" href="#">Colabora+</a>
+        </div>
+
+        <!-- Lado direito: ícone de perfil -->
+        <div class="ms-auto">
+          <a href="index.html"
+            ><i class="bi bi-person-circle fs-1 text-white pe-4"></i
+          ></a>
+        </div>
+
+        <!-- menu lateral -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">
+              Colabora+
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+              <li class="nav-item">
+                <a class="nav-link active" href="profile.html"
+                  ><i class="fa-solid fa-house pe-3"></i>Perfil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="missoes.html"
+                  ><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  ><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  ><i class="fa-solid fa-message pe-3"></i>Mentoria</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--fim navbar-->
+
+    <div class="container mt-5">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card p-4 shadow-sm h-100">
+            <div class="d-flex align-items-center mb-4">
+              <img
+                src="images/carla.png"
+                alt="Gabriela Mendes"
+                class="profile-img me-4"
+              />
+              <div>
+                <h2 class="h4 fw-bold">Gabriela Mendes</h2>
+                <p class="text-muted mb-1">Analista Sênior de Marketing</p>
+                <span class="badge-influencer p-2">Influencer Nível 3</span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap mb-3 gap-2">
+              <span class="tag p-2">Comunicação</span>
+              <span class="tag p-2">Inovação</span>
+              <span class="tag p-2">Design</span>
+            </div>
+
+            <div class="card p-3 mb-4">
+              <p class="mb-0">
+                Apaixonada por capacitar novos talentos. 8 anos de experiência.
+              </p>
+            </div>
+
+            <div class="stats-card mt-auto">
+              <h5 class="mb-3">Desempenho da Mentora</h5>
+              <ul class="list-unstyled mb-0">
+                <li><strong>Total de mentorias realizadas:</strong> 27</li>
+                <li><strong>Média de avaliação (1-5 estrelas):</strong> 4.9</li>
+                <li>
+                  <strong>Badge de Destaque:</strong> "Influencer Top 5 da
+                  Semana"
+                </li>
+                <li><strong>Tempo médio de resposta:</strong> 3h</li>
+                <li><strong>% de satisfação dos mentorados:</strong> 98%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="d-flex flex-column h-100">
+            <div class="card p-4 mb-4 shadow-sm">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h3 class="h5 fw-bold mb-0">Seu Influencer na jornada</h3>
+                <i class="bi bi-question-circle text-muted"></i>
+              </div>
+              <div class="influencer-badges">
+                <img src="images/conquista05.png" alt="Badge 1" />
+                <img src="images/conquista08.png" alt="Badge 2" />
+                <img src="images/conquista03.png" alt="Badge 3" />
+              </div>
+            </div>
+
+            <div
+              class="quote-card shadow-sm flex-grow-1 d-flex flex-column justify-content-center"
+            >
+              <p class="quote-text lead mb-0">
+                A Gabriela me ajudou bastante durante o meu Onboarding!
+              </p>
+              <p class="quote-author mt-2">-Daniel</p>
+            </div>
+
+            <div
+              class="quote-card shadow-sm mt-3 flex-grow-1 d-flex flex-column justify-content-center"
+            >
+              <p class="quote-text lead mb-0">
+                Foi essencial nas minhas primeiras semanas. Me senti
+                acolhido(a)!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
