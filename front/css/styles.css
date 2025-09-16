@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-.navbar img{
-    width: auto;
-    height: 5vh;
-}
 
 .color-purple{
   background-color: #6c29a6;
@@ -38,6 +34,10 @@
     position: relative;
     font-weight: 500;
     transition: all 0.3s ease; /* suaviza as animações */
+  }
+
+  .navbar img{
+    height: 4vh;
   }
 
   /* Cor e crescimento no hover */
