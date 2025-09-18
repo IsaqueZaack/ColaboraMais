@@ -1,6 +1,6 @@
 package modelo;
 
-public class Recompensas {
+public class Recompensa {
     private Long id_recompensa;
     private String nome;
     private String descricao;

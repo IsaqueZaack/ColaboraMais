@@ -1,10 +1,10 @@
 package modelo;
 
-public class Missoes {
+public class Missao {
     private Long id_missao;
     private String titulo;
     private String descricao;
-    private int pontos_recompesa;
+    private int pontos_recompensa;
 
     public Long getId_missao() {
         return id_missao;
@@ -30,11 +30,11 @@ public class Missoes {
         this.descricao = descricao;
     }
 
-    public int getPontos_recompesa() {
-        return pontos_recompesa;
+    public int getPontos_recompensa() {
+        return pontos_recompensa;
     }
 
-    public void setPontos_recompesa(int pontos_recompesa) {
-        this.pontos_recompesa = pontos_recompesa;
+    public void setPontos_recompensa(int pontos_recompensa) {
+        this.pontos_recompensa = this.pontos_recompensa;
     }
 }
