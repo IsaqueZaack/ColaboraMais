@@ -101,7 +101,6 @@
 }
 
 /*card teste*/
-/* From Uiverse.io by Yaya12085 */ 
 .task {
     position: relative;
     color: #2e2e2f;
@@ -130,7 +129,7 @@
     padding: 4px 13px;
     font-size: 12px;
     color: #ffffff;
-    background-color: #1389eb;
+    background-color: #6c29a6;
 }
 
 .tags {
@@ -179,7 +178,7 @@
 .viewer span {
     height: 30px;
     width: 30px;
-    background-color: rgb(28, 117, 219);
+    background-color: #6c29a6;
     margin-right: -10px;
     border-radius: 50%;
     border: 1px solid #fff;
