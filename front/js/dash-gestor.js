@@ -105,10 +105,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
         lista.forEach(colab => {
             const statusMap = {
-                destaque: { text: 'Em Destaque', class: 'tag-destaque' },
-                atencao: { text: 'Requer Atenção', class: 'tag-atencao' },
-                risco: { text: 'Em Risco', class: 'tag-risco' }
+                destaque: { text: 'Em Destaque', class: 'tag-destaque text-success' },
+                atencao: { text: 'Requer Atenção', class: 'tag-atencao text-warning' },
+                risco: { text: 'Em Risco', class: 'tag-risco text-danger' }
             };
+
+            // --- ADIÇÃO INICIA AQUI ---
+            // 1. Define a variável para a cor da barra de progresso
+            let progressBarClass = '';
+            switch (colab.status) {
+                case 'destaque':
+                    progressBarClass = 'bg-success';
+                    break;
+                case 'atencao':
+                    progressBarClass = 'bg-warning';
+                    break;
+                case 'risco':
+                    progressBarClass = 'bg-danger';
+                    break;
+                default:
+                    progressBarClass = 'bg-secondary'; // Cor padrão caso não haja status
+            }
+            // --- ADIÇÃO TERMINA AQUI ---
 
             const itemHTML = `
                 <a href="#" class="list-group-item list-group-item-action collaborator-card" 
@@ -121,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <p class="mb-1 text-muted">${colab.cargo}</p>
                         <div class="progress mb-2" style="height: 8px;">
-                            <div class="progress-bar bg-purple" style="width: ${colab.progressoGeral}%;"></div>
+                            <div class="progress-bar ${progressBarClass}" style="width: ${colab.progressoGeral}%;"></div>
                         </div>
                         <div class="metric-icons">
                             <span><i class="fa-solid fa-flag-checkered text-purple"></i> Missões: ${colab.metricas.missoes}</span>
@@ -134,7 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
             listaColaboradoresEl.insertAdjacentHTML('beforeend', itemHTML);
         });
     };
-
     // Lógica de filtro e pesquisa para colaboradores
     const handleColaboradorFilter = () => {
         const searchTerm = searchInput.value.toLowerCase();
