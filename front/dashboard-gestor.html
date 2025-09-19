@@ -4,57 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard do Gestor - Colabora+</title>
+    <title>Super Dashboard do Gestor - Colabora+</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     
-    <link rel="stylesheet" href="./css/styles.css" /> <link rel="icon" type="image/png" href="./images/boneco-vivo.png">
-
-    <style>
-        .dashboard-card {
-            background-color: #f8f9fa;
-            border: none;
-            border-radius: 1rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            height: 100%;
-        }
-        .progress-donut {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #5d2595;
-            background: conic-gradient(#5d2595 65%, #e9ecef 0); /* 65% preenchido */
-        }
-        .progress-donut::before {
-            content: '';
-            position: absolute;
-            width: 80%;
-            height: 80%;
-            background: white;
-            border-radius: 50%;
-        }
-        .progress-donut-text {
-            position: relative;
-        }
-        .metric-card {
-            background-color: #f1e4ff;
-            border-radius: 10px;
-            padding: 1rem;
-        }
-        .text-purple { color: #5d2595; }
-        .btn-purple { background-color: #5d2595; color: white; }
-        .btn-purple:hover { background-color: #4a1e78; color: white; }
-    </style>
+    <link rel="stylesheet" href="./css/dash-gestor.css" /> 
+    <link rel="icon" type="image/png" href="./images/boneco-vivo.png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -66,108 +27,278 @@
                 </button>
                 <img src="images/logobr.png" alt="Logo Colabora+" class="mx-4" style="height: 30px;">
             </div>
-            <div class="d-flex align-items-center">
-                <span class="text-white d-none d-md-block me-3">Gestor</span>
-                <a href="index.html">
-                    <img src="./images/gestor-avatar.png" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;" alt="Avatar do Gestor">
-                </a>
+            <div class="ms-auto">
+                <a href="index.html"><i class="fa-solid fa-user-circle fs-1 text-white pe-4"></i></a>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">Colabora+</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fa-solid fa-house pe-3"></i>Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="forum.html"><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="mentoria.html"><i class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
-    <main class="container" style="margin-top: 100px;">
-        <h2 class="fw-bold mb-4">DASHBOARD</h2>
-        <div class="row g-4">
+    
+    <main class="container-fluid" style="margin-top: 100px;">
+        <h2 class=" p-5 fw-bold ">DASHBOARD DO GESTOR</h2>
+
+        <section class="mb-5 p-5">
+            <div class="dashboard-card p-4">
+                <div class=" d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Visão Geral do Desempenho</h5>
+                    <select class="form-select form-select-sm" id="periodo-filtro" style="width: auto;">
+                        <option value="semana" selected>Semana</option>
+                        <option value="mes">Mês</option>
+                        <option value="ano">Ano</option>
+                    </select>
+                </div>
+                <div class="row g-3 text-center">
+                    <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
+                        <div class="progress-donut mb-2" id="donut-chart">
+                            <span class="progress-donut-text" id="donut-text">65%</span>
+                        </div>
+                        <p class="fw-bold mb-0">Missões concluídas</p>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row g-3 h-100">
+                            <div class="col-md-4">
+                                <div class="metric-card h-100">
+                                    <i class="fa-solid fa-clock fa-2x text-purple mb-2"></i>
+                                    <h4 class="fw-bold mb-1" id="tempo-medio">8,2 h</h4>
+                                    <p class="text-muted mb-0">Tempo médio por missão</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="metric-card h-100">
+                                    <i class="fa-solid fa-comments fa-2x text-purple mb-2"></i>
+                                    <h4 class="fw-bold mb-1" id="participacoes-mentorias">245</h4>
+                                    <p class="text-muted mb-0">Participações em mentorias</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="metric-card h-100">
+                                    <i class="fa-solid fa-face-smile fa-2x text-purple mb-2"></i>
+                                    <h4 class="fw-bold mb-1" id="satisfacao-colaboradores">92%</h4>
+                                    <p class="text-muted mb-0">Satisfação dos Colaboradores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row g-4 mb-5">
+            <div class=" container p-5 col-lg-12">
+                <section>
+                    <h3 class="fw-bold mb-3">Saúde do Onboarding</h3>
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <div class="health-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-users fa-2x text-purple me-3"></i>
+                                    <div>
+                                        <p class="mb-0 text-muted">Progresso Geral da Turma</p>
+                                        <h4 class="fw-bold mb-0">72%</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="health-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-fire fa-2x text-orange me-3"></i>
+                                    <div>
+                                        <p class="mb-0 text-muted">Engajamento da Turma</p>
+                                        <h4 class="fw-bold mb-0">8.5/10</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                             <div class="health-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-triangle-exclamation fa-2x text-danger me-3"></i>
+                                    <div>
+                                        <p class="mb-0 text-muted">Alertas Importantes</p>
+                                        <h4 class="fw-bold mb-0">1 Colaborador em Risco</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
             
-            <div class="col-lg-7">
-                <div class="dashboard-card p-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="fw-bold mb-0">Gráficos de Desempenho</h5>
-                        <select class="form-select form-select-sm" style="width: auto;">
-                            <option selected>Semana</option>
-                            <option value="1">Mês</option>
-                            <option value="2">Ano</option>
-                        </select>
-                    </div>
-                    <div class="row g-3 text-center">
-                        <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
-                            <div class="progress-donut mb-2">
-                                <span class="progress-donut-text">65%</span>
-                            </div>
-                            <p class="fw-bold">Missões concluídas</p>
-                        </div>
-                        <div class="col-md-6 d-flex flex-column justify-content-around">
-                            <div class="metric-card">
-                                <i class="fa-solid fa-clock fa-2x text-purple mb-2"></i>
-                                <h4 class="fw-bold mb-1">8,2 h</h4>
-                                <p class="text-muted mb-0">Tempo médio por missão</p>
-                            </div>
-                            <div class="metric-card mt-3">
-                                <i class="fa-solid fa-comments fa-2x text-purple mb-2"></i>
-                                <h4 class="fw-bold mb-1">245</h4>
-                                <p class="text-muted mb-0">Participações em mentorias</p>
-                            </div>
+            <div class="container col-lg-12">
+                <section>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                        <h3 class="fw-bold mb-0">Acompanhamento dos Colaboradores</h3>
+                        <div class="d-flex gap-2">
+                            <input type="search" id="search-input" class="form-control" placeholder="Buscar por nome...">
+                            <select id="filter-status" class="form-select" style="width: auto;">
+                                <option value="todos">Todos</option>
+                                <option value="destaque">Em Destaque</option>
+                                <option value="atencao">Requer Atenção</option>
+                                <option value="risco">Em Risco</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-5">
-                <div class="dashboard-card p-4">
-                    <h5 class="fw-bold mb-3">Progresso colabora+</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="./images/sabrina.png" alt="Sabrina" class="rounded-circle me-3" width="50" height="50">
-                                <div class="w-100">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="fw-bold">Sabrina</span>
-                                        <span class="text-success small">✔ Concluído</span>
-                                    </div>
-                                    <div class="progress" style="height: 10px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="./images/renato.png" alt="Renato" class="rounded-circle me-3" width="50" height="50">
-                                <div class="w-100">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="fw-bold">Renato</span>
-                                        <span class="text-warning small">Em andamento</span>
-                                    </div>
-                                    <div class="progress" style="height: 10px;">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 77%;" aria-valuenow="77"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-4">
-                             <div class="d-flex align-items-center mb-2">
-                                <img src="./images/marina.png" alt="Marina" class="rounded-circle me-3" width="50" height="50">
-                                <div class="w-100">
-                                    <div class="d-flex justify-content-between">
-                                        <span class="fw-bold">Marina</span>
-                                        <span class="text-danger small">2m atraso</span>
-                                    </div>
-                                    <div class="progress" style="height: 10px;">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 18%;" aria-valuenow="18"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="d-grid">
-                       <button class="btn btn-purple mt-2">Ver mais</button>
+                    <div class="list-group" id="lista-colaboradores">
                     </div>
-                </div>
+                </section>
             </div>
-
         </div>
+
+        <div class="container d-flex gap-5">
+ 
+            <div class="col-lg-6 d-flex flex-column justify-content-between gap-5">
+            <div class="col-lg-12">
+                <section>
+                    <h3 class="fw-bold mb-3">Próximos Passos e Missões</h3>
+                    <div class="dashboard-card p-4">
+                        <ul class="list-group list-group-flush" id="proximas-missoes">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">Missão: Cultura Organizacional</span>
+                                    <p class="mb-0 text-muted small">Para: Todos os novos colaboradores</p>
+                                </div>
+                                <span class="badge bg-primary">Prazo: 25/10</span>
+                            </li>
+                             <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">Treinamento: Ferramentas Vivo</span>
+                                    <p class="mb-0 text-muted small">Para: Sabrina e Renato</p>
+                                </div>
+                                <span class="badge bg-primary">Data: 28/10</span>
+                            </li>
+                             <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">Check-in Mensal: Turma Set/Out</span>
+                                    <p class="mb-0 text-muted small">Para: Gestores e Buddies</p>
+                                </div>
+                                <span class="badge bg-primary">Data: 05/11</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <section class="mb-5 col-lg-12">
+            <h3 class="fw-bold mb-3">Mentorias Ativas</h3>
+            <div class="dashboard-card p-4">
+                <div class="row mb-3">
+                    <div class="col-md-6 text-center">
+                        <h5 class="fw-bold" id="mentorias-agendadas">8</h5>
+                        <p class="text-muted small">Mentorias Agendadas</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <h5 class="fw-bold text-success" id="mentorias-conclusao">85%</h5>
+                        <p class="text-muted small">Taxa de Conclusão</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush" id="lista-mentorias">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="fw-bold">Sabrina <i class="fa-solid fa-arrow-right text-muted mx-2"></i> Gabriel Mendes</span>
+                            <p class="mb-0 text-muted small">Status: Em andamento</p>
+                        </div>
+                        <span class="badge bg-info text-dark">Próxima: 27/10</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="fw-bold">Renato <i class="fa-solid fa-arrow-right text-muted mx-2"></i> Ana Clara</span>
+                            <p class="mb-0 text-muted small">Status: Próximo Encontro</p>
+                        </div>
+                        <span class="badge bg-info text-dark">Próxima: 26/10</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="fw-bold">Marina <i class="fa-solid fa-arrow-right text-muted mx-2"></i> Carlos Souza</span>
+                            <p class="mb-0 text-muted small">Status: Aguardando 1º contato</p>
+                        </div>
+                        <span class="badge bg-danger">Atrasado</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+            
+        </div>
+
+        
+
+            <div class="col-lg-6">
+                <section>
+                    <h3 class="fw-bold mb-3">Engajamento no Fórum</h3>
+                    <div class="dashboard-card p-4">
+                        <div class="row mb-3">
+                            <div class="col-md-6 text-center">
+                                <h5 class="fw-bold" id="forum-topicos">12</h5>
+                                <p class="text-muted small">Tópicos Abertos</p>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h5 class="fw-bold text-danger" id="forum-respostas">3</h5>
+                                <p class="text-muted small">Respostas Pendentes</p>
+                            </div>
+                        </div>
+                        <canvas id="forum-chart"></canvas>
+                    </div>
+                </section>
+            </div>
+        </div>  
+
     </main>
 
+    <div class="modal fade" id="modalColaborador" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="modal-nome"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img id="modal-img" src="" class="rounded-circle mb-3" width="120" height="120">
+                <h6 class="fw-bold" id="modal-cargo"></h6>
+                <p class="text-muted small">Buddy: <span id="modal-mentor"></span></p>
+                <span id="modal-tag" class="badge"></span>
+            </div>
+            <div class="col-md-8">
+                <h6 class="fw-bold">Desempenho por Competência</h6>
+                
+                <div class="chart-container">
+                    <canvas id="radar-chart"></canvas>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h6 class="fw-bold">Atividades Recentes</h6>
+            <ul class="list-group list-group-flush" id="modal-atividades">
+                </ul>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-paper-plane me-2"></i>Enviar Mensagem</button>
+        <button type="button" class="btn btn-success"><i class="fa-solid fa-award me-2"></i>Reconhecer Desempenho</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/dash-gestor.js"></script>
 </body>
 </html>

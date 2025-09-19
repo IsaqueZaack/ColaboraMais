@@ -1,0 +1,145 @@
+/* navbar e menu */
+.color-purple{
+    background-color: #6c29a6;
+}
+
+.rec-text{
+    color: #6d6969;
+}
+
+/* Estilização do menu lateral (offcanvas) */
+.offcanvas-header, .offcanvas-body{
+    background-color: #42295c;
+    color: #ffffff;
+}
+
+.nav-item{
+    color: #ffffff;
+}
+
+.offcanvas,
+.offcanvas .offcanvas-body,
+.offcanvas .nav-link,
+.offcanvas .nav-link i {
+    color: white !important;
+}
+
+.offcanvas .btn-close {
+  filter: invert(1); /* deixa o ícone branco */
+  opacity: 1;        /* mantém ele visível */
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease; /* suaviza as animações */
+}
+
+
+  /* Cor e crescimento no hover */
+.navbar-nav .nav-link:hover {
+    color: #ab90dd !important; /* roxo do Bootstrap */
+    transform: scale(1.0); /* cresce um pouco */
+}
+
+.navbar img{
+    height: 4vh;
+}
+
+/*botão do menu */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* fim navbar e menu */
+
+
+/* Cores e Estilos Base */
+.text-purple { color: #5d2595; }
+.text-orange { color: #ff6600; }
+.bg-purple { background-color: #5d2595; }
+
+/* Cards Genéricos e de Desempenho */
+.dashboard-card, .health-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s;
+    height: 100%; /* Garante que todos os cards tenham altura igual na row */
+}
+.dashboard-card:hover, .health-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.metric-card {
+    background-color: #f1e4ff;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Garante que os cards de métricas ocupem a altura total */
+    text-align: center;
+}
+
+/* Gráfico de Donut */
+.progress-donut {
+    position: relative;
+    width: 120px; /* Reduzido para caber melhor */
+    height: 120px; /* Reduzido para caber melhor */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem; /* Fonte ajustada */
+    font-weight: bold;
+    color: #5d2595;
+    background: conic-gradient(#5d2595 var(--progress-percent, 0%), #e9ecef 0);
+    transition: background 0.5s ease-in-out;
+}
+.progress-donut::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.progress-donut-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Lista de Colaboradores */
+.collaborator-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem; /* Espaçamento entre os itens */
+    transition: background-color 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+.collaborator-card:hover {
+    background-color: #e9ecef;
+}
+
+/* Modal */
+#modal-atividades li {
+    font-size: 0.9rem;
+}
+
+/* CORREÇÃO: Define um container com altura fixa para o gráfico */
+.chart-container {
+    position: relative;
+    height: 280px; /* Altura máxima do gráfico */
+    width: 100%;
+}
