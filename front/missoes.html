@@ -76,97 +76,132 @@
     <!--fim navbar-->
 
     <!--seção missões-->
-    <!--futuramente inserir um filtro de vizualização do andamento da missão-->
-    <section class="container-missoes text-center" style="margin-top: 100px;">
-        <div class="row w-75 mx-auto p-2 text-center text-lg-start">
-            <!--título-->
-            <div class="col-12 col-lg-6 text-center">
-                <h1 class="mb-4 pt-2 text-uppercase fw-bold">Minhas Missões</h1>
-            </div>
-            <!--recompensas-->
-            <div class="col-12 col-lg-6 d-flex flex-column align-items-center align-itms-lg-start">
-                <h4 class="rec-titulo fs-3 ps-4">Recompensas</h4>
-                <div class="rec-box d-flex align-items-center">
-                    <img src="./images/conquista1.png" alt="Icone de Recompensas" class="img-fluid"
-                        style="max-width:80px;">
-                    <p class="rec-text fw-bold text-uppercase fs-5">90 pontos</p>
-                </div>
-            </div>
-        </div>
-        <div class="row w-75 mx-auto g-4">
-            <!--card 1-->
-            <div class="col-12 col-md-6">
-                <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-                    <img src="./images/cultura-1.png" alt="Icone de cultura organizacional"
-                        class="img-fluid text-center mb-3 mb-md-0 me-md-4" style="width:110px; height:auto;">
-                    <div class="card-body text-center text-md-start">
-                        <h5 class="card-title">Introdução à cultura</h5>
-                        <button class="btn btn-primary w-100 wd-md-50 mt-2" type="submit">Concluído</button>
-                    </div>
-                </div>
-            </div>
-            <!--card 2-->
-            <div class="col-12 col-md-6">
-                <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-                    <img src="./images/ferramentas-1.png" alt="Icone de ferramentas de trabalho"
-                        class="img-fluid text-center mb-3 mb-md-0 me-md-4" style="width:110px; height:auto;">
-                    <div class="card-body text-center text-md-start">
-                        <h5 class="card-title">Ferramentas de trabalho</h5>
-                        <button class="btn btn-primary w-100 wd-md-50 mt-2" type="submit">Em andamento</button>
-                    </div>
-                </div>
-            </div>
-            <!--card 3-->
-            <div class="col-12 col-md-6">
-                <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-                    <img src="./images/processos-1.png" alt="Icone de processos internos"
-                        class="img-fluid text-center mb-3 mb-md-0 me-md-4" style="width:110px; height:auto;">
-                    <div class="card-body text-center text-md-start">
-                        <h5 class="card-title">Processos Internos</h5>
-                        <button class="btn btn-primary w-100 wd-md-50 mt-2" type="submit">Em andamento</button>
+    <main class="container-main pt5 mt-5">
+        <div class="container-fluid vh-100 p-3 p-md-4 p-lg-5 d-flex flex-column">
+            <!--título-->    
+        <header class="d-flex justify-content-around align-items-center mb-4">
+            <h2 class="h4">Trilha Vivo: <span class="fw-light">Descobrindo Nosso Mundo</span></h2>
+            <div class="reward-box">
+                <img src="./images/conquista1.png" alt="Icone de Recompensas" class="img-fluid"style="max-width:40px;"> 
+                Recompensas: <span id="points">0</span> Pontos</div>
+        </header>
 
+        <div class="row g-4 flex-grow-1">
+            <div class="col-12 col-lg-3">
+                <div class="main-panel left-panel">
+                    <div class="progress-container">
+                        <div class="progress-circle">
+                            <span id="progress-text">0%</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!--card 4-->
-            <div class="col-12 col-md-6">
-                <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-                    <img src="./images/sustentabilidade-1.png" alt="Icone de sustentabilidade"
-                        class="img-fluid text-center mb-3 mb-md-0 me-md-4" style="width:110px; height:auto;">
-                    <div class="card-body text-center text-md-start">
-                        <h5 class="card-title">Sustentabilidade</h5>
-                        <button class="btn btn-primary w-100 wd-md-50 mt-2" type="submit">Iníciar</button>
-
-                    </div>
-                </div>
-            </div>
-            <!--card 5-->
-            <div class="col-12 col-md-6">
-                <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-                    <img src="./images/lgpd-1.png" alt="Icone da LGPD"
-                        class="img-fluid text-center mb-3 mb-md-0 me-md-4" style="width:110px; height:auto;">
-                    <div class="card-body text-center text-md-start">
-                        <h5 class="card-title text-break">Lei Geral de Proteção de Dados Pessoais</h5>
-                        <button class="btn btn-primary w-100 wd-md-50 mt-2" type="submit">Iníciar</button>
+                    <div class="missions-day">
+                        <h5 class="mb-3">MISSÕES DO DIA</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-square-fill"></i>Explorar Plataforma</li>
+                            <li><i class="bi bi-check-square-fill"></i>Mentoria com o Buddy</li>
+                            <li><i class="bi bi-square"></i> Concluir 1ª Missão</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!--link ver todos-->
-            <div class="col-12 col-md-6">
-                <div class="card-link d-flex flex-row align-items-center pt-2 fs-4">
-                    <div class="card-body text-center text-md-center my-5">
-                        <a class="link-mais" href="#">Ver todos</a>
+            <div class="col-12 col-lg-6">
+                <div class="main-panel trail-map-container">
+                    <div id="trail-map" class="trail-map">
+                        <div class="node-wrapper" style="grid-area: 1 / 2;">
+                            <div class="node is-active" id="node-1">Nossa História</div>
+                        </div>
+                        <div class="node-wrapper" style="grid-area: 2 / 1; --connector-from: top;">
+                            <div class="node is-locked" id="node-2" data-requires="node-1">Processos Internos</div>
+                        </div>
+                        <div class="node-wrapper" style="grid-area: 2 / 3; --connector-from: top;">
+                            <div class="node is-locked" id="node-3" data-requires="node-1">Valores & Cultura</div>
+                        </div>
+                        <div class="node-wrapper" style="grid-area: 3 / 2; --connector-from: top;">
+                            <div class="node is-locked" id="node-4" data-requires="node-2,node-3">LGPD</div>
+                        </div>
+                        <div class="node-wrapper" style="grid-area: 4 / 1; --connector-from: top;">
+                            <div class="node is-locked" id="node-5" data-requires="node-4">Ferramentas de trabalho</div>
+                        </div>
+                        <div class="node-wrapper" style="grid-area: 4 / 3; --connector-from: top;">
+                            <div class="node is-locked" id="node-6" data-requires="node-4">Sustentabilidade</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+                <div class="main-panel right-panel">
+                    <h5 class="mb-3">INSÍGNIAS</h5>
+                    <div class="badges-container">
+                        <div class="badge-item is-unlocked">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Bem-Vindo</span>
+                        </div>
+                        <div class="badge-item is-unlocked">
+                            <i class="bi bi-star-fill"></i>
+                            <span>Conexão</span>
+                        </div>
+                        <div class="badge-item is-unlocked">
+                            <i class="bi bi-flag-fill me-2"></i>
+                            <span>Culture</span>
+                        </div>
+                        <div class="badge-item is-locked">
+                            <i class="bi bi-lock-fill"></i>
+                            <span>ID Vivo</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="modal fade" id="missionModal" tabindex="-1" aria-labelledby="missionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="missionModalLabel">
+                        <i class="bi bi-flag-fill me-2"></i>
+                        <span id="missionTitle">Título da Missão</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <p id="missionDescription">Descrição da missão aqui.</p>
+                            <div class="ratio ratio-16x9" id="missionMedia"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4>Questões</h4>
+                            <div id="missionQuestions"></div>
+                            
+
+                        <div id="missionFeedback" class="mt-3 d-none">
+                            <div class="feedback-box text-cente">
+                                <p class="mb-2">Você precisa acertar todas as questões para continuar. Que tal tentar de novo?</p>
+                                <button id="retryBtn" class="btn btn-primary">Tentar Novamente</button>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="completeMissionBtn" disabled>Concluir Missão</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
     <!--fim seção missões-->
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/missoes.js"></script>
 </body>
 
 </html>
