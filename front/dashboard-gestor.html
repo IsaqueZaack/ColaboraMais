@@ -19,41 +19,55 @@
 </head>
 
 <body>
+    <!--navbar-->
     <nav class="navbar bg-body-tertiary fixed-top color-purple">
         <div class="container-fluid">
+            <!-- Lado esquerdo: menu + texto -->
             <div class="d-flex align-items-center">
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <!-- hamburguer branco -->
                     <i class="fa-solid fa-bars text-white fs-4"></i>
                 </button>
-                <img src="images/logobr.png" alt="Logo Colabora+" class="mx-4" style="height: 30px;">
-            </div>
-            <div class="ms-auto">
-                <a href="index.html"><i class="fa-solid fa-user-circle fs-1 text-white pe-4"></i></a>
+
+                <img src="images/logobr.png" alt="" class="mx-4">
             </div>
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+            <!-- Lado direito: ícone de perfil -->
+            <div class="ms-auto">
+                <a href="index.html"><i class="bi bi-person-circle fs-1 text-white pe-4"></i></a>
+            </div>
+
+            <!-- menu lateral -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">Colabora+</h5>
+                    <h5 class="offcanvas-title fs-3 " id="offcanvasNavbarLabel">Colabora+</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
-                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fa-solid fa-house pe-3"></i>Perfil</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="forum.html"><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="mentoria.html"><i class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5 ">
+                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i
+                                    class="fa-solid fa-house pe-3"></i>Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i
+                                    class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="forum.html"><i
+                                    class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="mentoria.html"><i
+                                    class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+    <!--fim navbar-->
     
-    <main class="container-fluid" style="margin-top: 100px;">
-        <h2 class=" p-5 fw-bold ">DASHBOARD DO GESTOR</h2>
+    <main class="container-fluid mt-5">
+        <h2 class=" p-5 fw-bold">DASHBOARD DO GESTOR</h2>
 
-        <section class="mb-5 p-5">
+        <section class="mb-2 p-lg-5 mb-lg-0 mb-5">
             <div class="dashboard-card p-4">
-                <div class=" d-flex justify-content-between align-items-center mb-3">
+                <div class=" d-lg-flex justify-content-between align-items-center mb-3 ">
                     <h5 class="fw-bold mb-0">Visão Geral do Desempenho</h5>
                     <select class="form-select form-select-sm" id="periodo-filtro" style="width: auto;">
                         <option value="semana" selected>Semana</option>
@@ -98,11 +112,11 @@
         </section>
 
         <div class="row g-4 mb-5">
-            <div class=" container p-5 col-lg-12">
+            <div class=" container p-lg-5 col-12 mb-lg-0 mb-5">
                 <section>
                     <h3 class="fw-bold mb-3">Saúde do Onboarding</h3>
                     <div class="row g-3">
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="health-card p-3">
                                 <div class="d-flex align-items-center">
                                     <i class="fa-solid fa-users fa-2x text-purple me-3"></i>
@@ -113,7 +127,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div class="health-card p-3">
                                 <div class="d-flex align-items-center">
                                     <i class="fa-solid fa-fire fa-2x text-orange me-3"></i>
@@ -124,7 +138,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4">
                              <div class="health-card p-3">
                                 <div class="d-flex align-items-center">
                                     <i class="fa-solid fa-triangle-exclamation fa-2x text-danger me-3"></i>
@@ -139,11 +153,11 @@
                 </section>
             </div>
             
-            <div class="container col-lg-12">
+            <div class="container col-lg-12 p-lg-5">
                 <section>
-                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
-                        <h3 class="fw-bold mb-0">Acompanhamento dos Colaboradores</h3>
-                        <div class="d-flex gap-2">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-5 ">
+                        <h3 class="fw-bold ">Acompanhamento dos Colaboradores</h3>
+                        <div class="d-flex gap-5 ">
                             <input type="search" id="search-input" class="form-control" placeholder="Buscar por nome...">
                             <select id="filter-status" class="form-select" style="width: auto;">
                                 <option value="todos">Todos</option>
@@ -154,19 +168,19 @@
                         </div>
                     </div>
 
-                    <div class="list-group" id="lista-colaboradores">
+                    <div class="list-group d-lg-flex gap-lg-0 gap-3" id="lista-colaboradores">
                     </div>
                 </section>
             </div>
         </div>
 
-        <div class="container d-flex gap-5">
+        <div class="d-lg-flex gap-5 p-lg-5 ">
  
-            <div class="col-lg-6 d-flex flex-column justify-content-between gap-5">
+            <div class="col-lg-6 d-lg-flex flex-column justify-content-between gap-5">
             <div class="col-lg-12">
                 <section>
                     <h3 class="fw-bold mb-3">Próximos Passos e Missões</h3>
-                    <div class="dashboard-card p-4">
+                    <div class="dashboard-card p-lg-4">
                         <ul class="list-group list-group-flush" id="proximas-missoes">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <div>
@@ -194,8 +208,8 @@
                 </section>
             </div>
 
-            <section class="mb-5 col-lg-12">
-            <h3 class="fw-bold mb-3">Mentorias Ativas</h3>
+            <section class="mb-5 col-lg-12 col-12">
+            <h3 class="fw-bold mb-3 mt-lg-0 mt-5">Mentorias Ativas</h3>
             <div class="dashboard-card p-4">
                 <div class="row mb-3">
                     <div class="col-md-6 text-center">
@@ -237,7 +251,7 @@
 
         
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-12">
                 <section>
                     <h3 class="fw-bold mb-3">Engajamento no Fórum</h3>
                     <div class="dashboard-card p-4">

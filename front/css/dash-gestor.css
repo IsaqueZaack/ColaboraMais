@@ -119,17 +119,12 @@
 
 /* Lista de Colaboradores */
 .collaborator-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
     border-radius: 0.5rem;
-    margin-bottom: 0.5rem; /* Espaçamento entre os itens */
     transition: background-color 0.2s, transform 0.2s;
     cursor: pointer;
 }
 .collaborator-card:hover {
-    background-color: #e9ecef;
+    background-color: #feedff;
 }
 
 /* Modal */

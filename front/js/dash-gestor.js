@@ -128,8 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             // --- ADIÇÃO TERMINA AQUI ---
 
+            // --- lista de colaboradores em acompanhamento ---
             const itemHTML = `
-                <a href="#" class="list-group-item list-group-item-action collaborator-card" 
+                <a href="#" class="list-group-item list-group-item-action collaborator-card d-lg-flex p-3 gap-3" 
                    data-bs-toggle="modal" data-bs-target="#modalColaborador" data-id="${colab.id}">
                     <img src="${colab.img}" class="rounded-circle" width="60" height="60">
                     <div class="flex-grow-1">
@@ -141,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="progress mb-2" style="height: 8px;">
                             <div class="progress-bar ${progressBarClass}" style="width: ${colab.progressoGeral}%;"></div>
                         </div>
-                        <div class="metric-icons">
+                        <div class="metric-icons d-flex gap-3">
                             <span><i class="fa-solid fa-flag-checkered text-purple"></i> Missões: ${colab.metricas.missoes}</span>
                             <span><i class="fa-solid fa-comments text-purple"></i> Fórum: ${colab.metricas.forum} posts</span>
                             <span><i class="fa-solid fa-user-group text-purple"></i> Mentoria: ${colab.metricas.mentoria} sessões</span>
