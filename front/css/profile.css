@@ -1,0 +1,127 @@
+/* Cores Globais */
+.color-purple {
+  background-color: #6c29a6;
+}
+.text-purple {
+  color: #6c29a6;
+}
+.btn-purple {
+  background-color: #6c29a6;
+  color: white;
+}
+.btn-purple:hover {
+  background-color: #4c2889;
+  color: white;
+}
+.border-purple {
+    border-color: #6c29a6 !important;
+}
+
+/* Estilo do Offcanvas (Menu Lateral) */
+.offcanvas-header, .offcanvas-body {
+  background-color: #42295c;
+  color: #ffffff;
+}
+.offcanvas .nav-link, .offcanvas .nav-link i {
+  color: white !important;
+}
+.offcanvas .nav-link:hover {
+    color: #c6b3e3 !important;
+}
+.offcanvas .btn-close {
+  filter: invert(1);
+  opacity: 1;
+}
+
+/* Círculo de Progresso */
+.progress-circle {
+  width: 130px;
+  height: 130px;
+  background-color: #ededed;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Área de Conquistas */
+.conquistas {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6c29a6 #f1f1f1;
+}
+.conquistas::-webkit-scrollbar { height: 8px; }
+.conquistas::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.conquistas::-webkit-scrollbar-thumb { background: #c6b3e3; border-radius: 10px; }
+.conquistas::-webkit-scrollbar-thumb:hover { background: #6c29a6; }
+
+.badge-img {
+  height: 90px;
+  width: 90px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.badge-img:hover {
+  transform: scale(1.1);
+}
+
+/* Estrutura da Timeline */
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: calc(100% - 20px);
+    width: 3px;
+    background: #e9ecef;
+}
+.timeline-item {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 24px;
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+.timeline-marker-check, .timeline-marker-active, .timeline-marker-next {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.timeline-marker-check { background-color: #198754; box-shadow: 0 0 0 4px #e9ecef; }
+.timeline-marker-active { background-color: #6c29a6; box-shadow: 0 0 0 4px #e9ecef; }
+.timeline-marker-next { background-color: #ced4da; box-shadow: 0 0 0 4px #e9ecef; }
+
+
+/* NOVOS ESTILOS */
+
+/* Foto de Perfil Clicável */
+.profile-pic-expandable {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.profile-pic-expandable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Links de Contato */
+.contact-link {
+    font-size: 1.5rem; /* Tamanho dos ícones */
+    color: #6c757d; /* Cinza do Bootstrap */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.contact-link:hover {
+    color: #6c29a6; /* Roxo */
+}

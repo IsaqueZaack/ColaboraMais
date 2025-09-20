@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colabora Mais</title>
+    <title>Meu Perfil - Colabora+</title>
 
-    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,217 +12,192 @@
       rel="stylesheet"
     />
 
-    <!--chamada para os icones-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!--chamada para o bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
     />
 
-    <!--css-->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
 
-    <!--adicionar icone do bonequinho vivo-->
-    <link rel="icon" type="image/png" href="./images/boneco-vivo.png">
+    <link rel="icon" type="image/png" href="./images/boneco-vivo.png" />
   </head>
 
-  <body>
-    <!--navbar-->
+  <body class="bg-light">
     <nav class="navbar bg-body-tertiary fixed-top color-purple">
-        <div class="container-fluid">
-        <!-- Lado esquerdo: menu + texto -->
-            <div class="d-flex align-items-center">
-            <button
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <button
             class="navbar-toggler border-0"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
-        >
-            <!-- hamburguer branco -->
+          >
             <i class="fa-solid fa-bars text-white fs-4"></i>
-            </button>
-
-            <img src="images/logobr.png" alt="" class="mx-4">
+          </button>
+          <img
+            src="images/logobr.png"
+            alt="Logo Colabora+"
+            class="mx-4"
+            style="height: 30px"
+          />
         </div>
-
-        <!-- Lado direito: ícone de perfil >>> tirar e ajustar o tamanho-->
         <div class="ms-auto">
-        <a href="index.html"
+          <a href="index.html"
             ><i class="bi bi-person-circle fs-1 text-white pe-4"></i
-        ></a>
+          ></a>
         </div>
-
-            <!-- menu lateral -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title fs-3 " id="offcanvasNavbarLabel">Colabora+</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5 ">
-                        <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fa-solid fa-house pe-3"></i>Perfil</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="missoes.html"><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="forum.html"><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="mentoria.html"><i class="fa-solid fa-message pe-3"></i>Mentoria</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">
+              Colabora+
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+              <li class="nav-item">
+                <a class="nav-link active" href="profile.html"
+                  ><i class="fa-solid fa-house pe-3"></i>Perfil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="missoes.html"
+                  ><i class="fa-solid fa-ranking-star pe-3"></i>Missões</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="forum.html"
+                  ><i class="fa-solid fa-users-rays pe-3"></i>Fórum</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mentoria.html"
+                  ><i class="fa-solid fa-message pe-3"></i>Mentoria</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
-    <!--fim navbar-->
+    <main class="container mt-5 pt-5">
+      <div class="text-center">
+        <img
+          id="profilePicture"
+          src="./images/isaac.png"
+          alt="Foto do Colaborador"
+          class="rounded-circle mb-3 profile-pic-expandable"
+          width="120"
+          height="120"
+          data-bs-toggle="modal"
+          data-bs-target="#modalProfilePic"
+        />
+        <h4 class="fw-bold" id="userName">Carregando...</h4>
+        <p class="mb-1 text-muted" id="userRole"></p>
+        <p class="text-purple fw-bold">
+          Buddy:
+          <a href="#" id="userBuddy" class="text-purple text-decoration-none"></a>
+        </p>
+        <div id="userTags" class="d-flex justify-content-center flex-wrap my-2"></div>
+        <div id="userContact" class="d-flex justify-content-center gap-3 mt-2"></div>
+      </div>
 
-    <main class="container text-center mt-5">
-      <!-- Foto e nome -->
-      <img
-        src="./images/isaac.png"
-        alt="Foto do Colaborador"
-        class="rounded-circle mb-3 mt-5"
-        width="120"
-        height="120"
-      />
-      <h5 class="fw-bold">José Rodrigues</h5>
-      <p class="mb-0 text-muted">Desenvolvedor Back-end</p>
-      <p class="text-purple">Buddy: Gabriel Mendes</p>
-
-      <div class="container d-lg-flex mt-5 gap-5 justify-content-center">
-        <!-- Progresso -->
-        <div class="card col-lg-6 shadow-sm border-0 p-3 mt-4">
-          <h6 class="fw-bold text-start">Progresso</h6>
-          <div class="d-flex justify-content-around align-items-center mt-2">
-            <!-- Gráfico de progresso -->
-            <div class="progress-circle">
-              <span>75%</span>
-            </div>
-            <!-- Pontuação -->
-            <div>
-              <p class="fw-bold">Pontuação</p>
-              <p class="text-purple">480/1000</p>
+      <div class="row mt-4 g-4 justify-content-center">
+        <div class="col-lg-5">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body d-flex flex-column">
+              <h6 class="fw-bold">Meu Progresso</h6>
+              <div
+                class="d-flex flex-column flex-md-row justify-content-around align-items-center mt-2 flex-grow-1"
+              >
+                <div
+                  id="progress-circle"
+                  class="progress-circle d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <span id="progress-text" class="fs-4">0%</span>
+                </div>
+                <div class="text-center mt-3 mt-md-0">
+                  <p class="fw-bold fs-5 mb-1">Pontuação Total</p>
+                  <p class="text-purple h4 fw-bold" id="userPoints">0 / 1000</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Conquistas -->
-        <div class="card col-lg-6 shadow-sm border-0 p-3 mt-4">
-          <h6 class="fw-bold text-start">Conquistas</h6>
-          <div class="conquistas d-flex flex-row overflow-auto">
-            
-  <div>
-    <img
-      src="./images/conquista01.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 1"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="O Iniciante: Concedido por completar seu primeiro desafio ou atividade. Todos os grandes caminhos começam com um único passo!"
-    />
-  </div>
-
-  <div>
-    <img
-      src="./images/conquista02.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 2"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Mestre da Assiduidade: Concedido por fazer login na plataforma por 7 dias consecutivos. A consistência é a chave para o sucesso!"
-    />
-  </div>
-  
-  <div>
-    <img
-      src="./images/conquista03.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 1"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Colaborador Lendário: Concedido por participar de 5 discussões no fórum e ter seus comentários marcados como úteis por outros usuários. Compartilhar conhecimento é poder!"
-    />
-  </div>
-
-  <div>
-    <img
-      src="./images/conquista04.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 2"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Explorador Destemido: Concedido por visitar todas as seções da plataforma. Não há canto que você não conheça!"
-    />
-  </div>
-  
-  <div>
-    <img
-      src="./images/conquista05.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 1"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Conquistador de Níveis: Concedido por alcançar o nível 10 na plataforma. Seus esforços estão dando frutos!"
-    />
-  </div>
-
-  <div>
-    <img
-      src="./images/conquista06.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 2"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Solucionador de Enigmas: Concedido por completar 3 desafios complexos com 100% de precisão. Sua inteligência é notável!"
-    />
-  </div>
-
-  <div>
-    <img
-      src="./images/conquista07.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 2"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Mentor Inspirador: Concedido por ajudar 3 novos usuários a entenderem a plataforma e completarem seus primeiros desafios. Sua orientação é valiosa!"
-    />
-  </div>
-
-  <div>
-    <img
-      src="./images/conquista08.png"
-      class="badge-img rounded m-1"
-      alt="Conquista 2"
-      data-bs-toggle="modal"
-      data-bs-target="#modalConquista"
-      data-descricao="Colecionador de Estrelas: Concedido por obter a pontuação máxima em 5 atividades diferentes. Você brilha mais forte que ninguém!"
-    />
-  </div>
-  
-  </div>
+        <div class="col-lg-7">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="fw-bold">Minhas Conquistas</h6>
+                    <div class="conquistas d-flex align-items-center flex-row flex-grow-1">
+                        <img src="./images/conquista01.png" class="badge-img rounded m-1" alt="O Iniciante" data-bs-toggle="modal" data-bs-target="#modalConquista" data-descricao="O Iniciante: Concedido por completar seu primeiro desafio." />
+                        <img src="./images/conquista02.png" class="badge-img rounded m-1" alt="Mestre da Assiduidade" data-bs-toggle="modal" data-bs-target="#modalConquista" data-descricao="Mestre da Assiduidade: Concedido por fazer login por 7 dias consecutivos." />
+                        <img src="./images/conquista03.png" class="badge-img rounded m-1" alt="Colaborador Lendário" data-bs-toggle="modal" data-bs-target="#modalConquista" data-descricao="Colaborador Lendário: Concedido por participar de 5 discussões no fórum." />
+                        <img src="./images/conquista04.png" class="badge-img rounded m-1" alt="Explorador Destemido" data-bs-toggle="modal" data-bs-target="#modalConquista" data-descricao="Explorador Destemido: Concedido por visitar todas as seções da plataforma."/>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
 
-<!-- Modal -->
-<div class="modal fade" id="modalConquista" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-3">
-      <img id="modalConquistaImg" src="" class="img-fluid" alt="Badge ampliada" />
-      <p id="modalConquistaDesc" class="text-muted"></p>
+      <div class="row my-4 justify-content-center">
+        <div class="col-lg-12">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-4">Minha Jornada</h5>
+              <ul class="timeline">
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="modalConquista" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modalConquistaTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <img id="modalConquistaImg" src="" class="img-fluid w-50 mx-auto" alt="Badge ampliada" />
+                <p id="modalConquistaDesc" class="text-muted mt-3"></p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    <div class="modal fade" id="modalProfilePic" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center">
+                    <img id="modalProfilePicImg" src="" class="img-fluid rounded-circle" alt="Foto do perfil ampliada" />
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-
+    <script src="./js/profile.js"></script>
   </body>
 </html>

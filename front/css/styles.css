@@ -4,136 +4,57 @@
   box-sizing: border-box;
 }
 
+/* ============================================= */
+/* ESTILOS GERAIS E DE LOGIN            */
+/* ============================================= */
 
-.color-purple{
+.color-purple {
   background-color: #6c29a6;
 }
 
-.color-grey{
-  background-color: #ededed;
+.text-purple {
+  color: #6c29a6;
 }
 
-.text-purple{
-    color: #6c29a6;
+.bg-offwhite {
+  background-color: #fefefe;
 }
 
-.btn-purple{
-    background-color: #6c29a6;
+.btn-purple {
+  background-color: #6c29a6;
+  color: white; /* Garante que o texto do botão seja branco */
 }
 
-.btn:hover{
-    background-color: #4c2889;
+.btn-purple:hover {
+  background-color: #4c2889;
+  color: white;
 }
 
-.login {
-  margin-top: 120px;
+/* Ajusta o posicionamento do card de login */
+
+
+.min-60vh {
+    min-height: 60vh;
 }
 
-/* Navbar custom */
-  .navbar-nav .nav-link {
-    position: relative;
-    font-weight: 500;
-    transition: all 0.3s ease; /* suaviza as animações */
-  }
 
-  .navbar img{
-    height: 4vh;
-  }
+/* ============================================= */
+/* ESTILOS PARA O MODAL DE SELEÇÃO DE PERFIL     */
+/* ============================================= */
 
-  /* Cor e crescimento no hover */
-  .navbar-nav .nav-link:hover {
-    color: #ab90dd !important; /* roxo do Bootstrap */
-    transform: scale(1.0); /* cresce um pouco */
-  }
-
-  /* underline animado */
- /* .navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background-color: #6f42c1; /* cor da linha 
-    transition: width 0.3s ease;
-  }*/
-
-  .navbar-nav .nav-link:hover::after {
-    width: 100%; /* aparece no hover */
-  }
-
-  /* Item ativo (ex: página atual) */
-  .navbar-nav .nav-link.active {
-    color: #6f42c1;
-    font-weight: bold;
-  }
-
-  /*nav-bar da Isa  */
-  /* Estilização do menu lateral (offcanvas) */
-.offcanvas-header, .offcanvas-body{
-    background-color: #42295c;
-    color: #ffffff;
-}
-
-.nav-item{
-    color: #ffffff;
-}
-
-.offcanvas,
-.offcanvas .offcanvas-body,
-.offcanvas .nav-link,
-.offcanvas .nav-link i {
-    color: white !important;
-}
-
-.offcanvas .btn-close {
-  filter: invert(1); /* deixa o ícone branco */
-  opacity: 1;        /* mantém ele visível */
-}
-
-/*botão do menu */
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.btn:focus,
-.btn:active {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Círculo de progresso simples (mock) */
-.progress-circle {
-  width: 15vh;
-  height: 15vh;
-  border-radius: 50%;
-  background: conic-gradient(#ca9eea 75%, #ffffff 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #4B0082;
-  font-size: 18px;
-}
-
-/* Área de conquistas com rolagem lateral */
-.conquistas {
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: thin;
-}
-
-.conquistas img {
-  flex: auto;
-  width: auto;
-  height: 15vh;
-  object-fit: cover;
-}
-
-.badge-img {
-  
-  transition: transform 0.3s ease;
+/* Faz os campos de input parecerem clicáveis */
+#email, #senha {
   cursor: pointer;
 }
 
-.badge-img:hover {
-  transform: scale(1.2);
+/* Estiliza os cards de seleção dentro do modal */
+.user-selection-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.user-selection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #6c29a6 !important;
 }
