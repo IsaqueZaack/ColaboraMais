@@ -53,8 +53,7 @@
 .conquistas::-webkit-scrollbar-thumb:hover { background: #6c29a6; }
 
 .badge-img {
-  height: 90px;
-  width: 90px;
+  width: 8rem;
   object-fit: cover;
   transition: transform 0.2s ease;
   cursor: pointer;
