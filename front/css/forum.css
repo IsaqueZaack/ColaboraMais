@@ -72,7 +72,7 @@
     box-shadow: 0 0 0 0.25rem rgba(147, 112, 219, 0.25); 
 }
 
-.btn-topico {
+.btn-novo-topico {
     padding: 1rem 2rem;
     font-weight: 700;
     background: rgb(255, 255, 255);
@@ -88,7 +88,7 @@
     box-shadow;
 }
 
-.btn-topico:hover {
+.btn-novo-topico:hover {
     color: #6c29a6;
     background: rgb(255, 255, 255);
     border-top: 2px solid #6c29a6;
@@ -106,14 +106,16 @@
     flex-direction: column;
     position: relative;
     color: #2e2e2f;
-    cursor: move;
+    cursor: pointer;
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
     margin-bottom: 1rem;
     border: 3px dashed transparent;
+    width: 100%;
     max-width: 350px;
+    height: 100%; 
 }
 
 .task:hover {
@@ -121,11 +123,18 @@
     border-color: rgba(162, 179, 207, 0.2) !important;
 }
 
+/* ---- INÍCIO DA CORREÇÃO NO CARD ---- */
 .task p {
     font-size: 15px;
     margin: 1.2rem 0;
-    flex-grow: 1
+    flex-grow: 1;
+
+    /* Garante a quebra de linha e esconde o excesso */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow: hidden;      /* Esconde o que passar da altura máxima */
+    max-height: 100px;     /* Altura máxima para o texto (aprox. 4-5 linhas) */
 }
+/* ---- FIM DA CORREÇÃO NO CARD ---- */
 
 .tag {
     border-radius: 100px;
@@ -197,4 +206,9 @@
     stroke: #fff;
 }
 
-
+/* ---- INÍCIO DA CORREÇÃO NO MODAL ---- */
+#modal-topic-content {
+    white-space: normal;      /* Permite a quebra de linha */
+    word-wrap: break-word;    /* Quebra palavras longas para evitar scroll horizontal */
+}
+/* ---- FIM DA CORREÇÃO NO MODAL ---- */
