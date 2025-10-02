@@ -2,6 +2,14 @@
 .color-purple{
     background-color: #6c29a6;
 }
+.btn-purple{
+    background-color: #6c29a6;
+    color: white;
+}
+/* Estilização do menu lateral (offcanvas) */
+.text-purple{
+    color: #6c29a6;
+}
 /* Estilização do menu lateral (offcanvas) */
 .offcanvas-header, .offcanvas-body{
     background-color: #42295c;
@@ -140,4 +148,60 @@
 }
 .contact-link:hover {
     color: #6c29a6; /* Roxo */
+}
+
+.chat-header {
+    background-color: #6c29a6;
+    color: white;
+}
+
+.chat-body {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f8f9fa; /* Fundo um pouco mais suave */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Container para cada linha de mensagem */
+.message-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+/* Balão de mensagem individual */
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+/* Estilos para mensagens ENVIADAS (pelo usuário) */
+.message-sent-row {
+    justify-content: flex-end; /* Alinha o container à direita */
+}
+
+.message-sent {
+    background-color: #6c29a6; /* Cor roxa do tema */
+    color: white;
+    border-bottom-right-radius: 4px; /* Achatado no canto */
+}
+
+/* Estilos para mensagens RECEBIDAS (do buddy) */
+.message-received-row {
+    justify-content: flex-start; /* Alinha o container à esquerda */
+}
+
+.message-received {
+    background-color: #e9ecef; /* Cinza claro */
+    color: #212529;
+    border-bottom-left-radius: 4px; /* Achatado no canto */
 }

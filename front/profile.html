@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,14 +19,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="./css/profile.css" />
-
     <link rel="icon" type="image/png" href="./images/boneco-vivo.png" />
   </head>
 
@@ -101,6 +97,7 @@
         </div>
       </div>
     </nav>
+    
     <main class="container mt-5 pt-5">
       <div class="text-center">
         <img
@@ -200,6 +197,29 @@
         </div>
     </div>
 
+    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header chat-header">
+            <div class="d-flex align-items-center">
+              <img id="chatBuddyPic" src="" class="rounded-circle me-3" width="40" height="40">
+              <h5 class="modal-title" id="chatModalLabel"></h5>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body chat-body" id="chat-messages">
+          </div>
+          <div class="modal-footer chat-footer">
+            <form id="chat-form" class="w-100">
+              <div class="input-group">
+                <input type="text" id="chat-input" class="form-control" placeholder="Digite sua mensagem..." autocomplete="off" required>
+                <button class="btn btn-purple" type="submit"><i class="fas fa-paper-plane"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/profile.js"></script>
