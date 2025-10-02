@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pointsDisplay = document.getElementById('points');
     const progressText = document.getElementById('progress-text');
     const missionModalElement = document.getElementById('missionModal');
+    const modalBody = missionModalElement.querySelector('.modal-body');
     const missionModal = new bootstrap.Modal(missionModalElement);
     const missionTitle = document.getElementById('missionTitle');
     const missionDescription = document.getElementById('missionDescription');
@@ -45,6 +46,39 @@ document.addEventListener('DOMContentLoaded', function () {
                     { text: "Rede 4.5G", correct: false },
                     { text: "Internet via Satélite", correct: false }, 
                     { text: "Rede 5G", correct: true }
+                ], correctlyAnswered: false, attempted: false }
+            ]
+        },
+        
+        "node-3": { 
+            title: "Nossa Cultura: Paixão Púrpura",
+            description: "Bem-vindo à essência da nossa cultura! A Paixão Púrpura representa a força que nos une e nos impulsiona. Neste vídeo, você vai entender por que essa cor é tão importante para nós. Vamos lá?",
+            mediaHtml: `<iframe width="560" height="315" src="https://www.youtube.com/embed/sqloJZYt8z4?si=KUTo6ZubBqnpQiXr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+            questions: [
+                { text: "De acordo com o vídeo, por que a cor púrpura é descrita como a que \"mais vibra\"?", options: [
+                    { text: "Porque é a primeira cor do arco-íris.", correct: false }, 
+                    { text: "Porque é a cor favorita da maioria das pessoas.", correct: false },
+                    { text: " Porque ela provoca, estimula e nos deixa inquietos.", correct: true }
+                ], correctlyAnswered: false, attempted: false },
+                { text: "No contexto da Vivo, o que significa a expressão \"Paixão Púrpura\"?", options: [
+                    { text: "Um novo plano de celular oferecido pela empresa.", correct: false }, 
+                    { text: "A cultura da empresa, fortalecida pela diversidade, inovação, conexão e sustentabilidade.", correct: true },
+                    { text: "A cor oficial do logotipo da Vivo.", correct: false }
+                ], correctlyAnswered: false, attempted: false },
+                { text: "Qual é o principal sentimento que a \"Paixão Púrpura\" busca despertar, segundo o vídeo?", options: [
+                    { text: "Inquietação e desconforto.", correct: false },
+                    { text: "Vontade de criar, ousar, ensinar e aprender.", correct: true }, 
+                    { text: " Sentir-se mais vivo e conectar-se ao que importa.", correct: false }
+                ], correctlyAnswered: false, attempted: false },
+                { text: "O vídeo menciona que a cultura da Vivo \"se retroalimenta todos os dias\". O que fortalece essa cultura?", options: [ 
+                    { text: "Apenas a inovação tecnológica.", correct: false },
+                    { text: "Seguir tradições sem mudanças.", correct: false },
+                    { text: "A diversidade, inovação, conexão e sustentabilidade. ", correct: true }
+                ], correctlyAnswered: false, attempted: false },
+                { text: "Qual é a pergunta final que o vídeo faz ao espectador?", options: [
+                    { text: "\"Como pulsa a sua paixão púrpura?\"", correct: true },
+                    { text: "\"O que é a Paixão Púrpura para você?\"", correct: false }, 
+                    { text: "\"Você sente a Paixão Púrpura?\"", correct: false }
                 ], correctlyAnswered: false, attempted: false }
             ]
         },
@@ -147,6 +181,12 @@ document.addEventListener('DOMContentLoaded', function () {
     retryBtn.addEventListener('click', () => {
         resetQuizState();
         renderQuestions(); // Renderiza as perguntas novamente, limpas
+        setTimeout(() => {
+        missionQuestionsContainer.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        }, 50);
     });
 
     completeMissionBtn.addEventListener('click', () => {

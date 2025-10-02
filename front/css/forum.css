@@ -100,6 +100,18 @@
     background: rgb(255, 255, 255);
 }
 
+.btn-form{
+    background-color: #6c29a6;
+    border-color: #6c29a6;
+    color: #ffffff;
+}
+
+.btn-form:hover{
+    border-radius: 2px solid #5a238f;
+    border-color: #5a238f;
+    color: #5a238f;
+}
+
 /*card teste*/
 .task {
     display: flex;
